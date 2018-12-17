@@ -1,6 +1,6 @@
 
 export const getState = () => {
     return {
-     type: "GET_STATE"
+     type: "GET_NEWS"
     }
 }

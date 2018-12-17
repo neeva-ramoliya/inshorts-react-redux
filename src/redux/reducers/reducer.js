@@ -1,7 +1,8 @@
+import defaultState from "../../data";
 
-export default (state = [], action) => {
+export default (state = defaultState, action) => {
         switch(action.type) {
-           case "GET_STATE": 
+           case "GET_NEWS": 
            return state;
            break;
 
