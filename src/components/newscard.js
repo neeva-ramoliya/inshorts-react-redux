@@ -24,9 +24,9 @@ class NewsCard extends React.Component {
 
                             <CardText className="font-roboto" dangerouslySetInnerHTML={{ __html: description.substring(0, 256) }}></CardText>
                             <ButtonGroup>
-                                <Like liked = {liked} likes= {likes} />
-                                <Dislike disliked = {disliked} dislikes= {dislikes} />
-                                <Bookmark bookmark = {bookmark} />
+                                <Like liked = {liked} likes= {likes} id={id} />
+                                <Dislike disliked = {disliked} dislikes= {dislikes} id={id} />
+                                <Bookmark bookmarked = {bookmark} id={id} />
                             </ButtonGroup>
                         </CardBody>
                         <CardSubtitle className="blockquote-footer">{info}</CardSubtitle>

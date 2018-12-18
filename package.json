@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://neeva-ramoliya29.github.io/inshorts-react-redux/",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server --open --mode development"
+    "start": "webpack-dev-server --open --mode development",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public --branch master"
   },
   "author": "",
   "license": "ISC",

@@ -8,10 +8,15 @@ import Dislike from "./dislikebutton";
 class NewsDetails extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            data : this.props.newsDetails
+        }
     }
 
+ 
+
     render() {
-        const { img, title, info, description, likes, dislikes, liked, disliked, bookmark } = this.props.newsDetails;
+        const { id, img, title, info, description, likes, dislikes, liked, disliked, bookmark } = this.props.newsDetails
         return (
             <Container className="mx-auto w-sm-75 w-xs-100" >
                 <Row className="my-2">
@@ -19,9 +24,9 @@ class NewsDetails extends React.Component {
                     <CardImg src={img}></CardImg>
                     <CardTitle className="my-3 display-4 font-Oswald"> {title}</CardTitle>
                     <ButtonGroup className="my-3">
-                        <Like liked={liked} likes={likes} />
-                        <Dislike disliked={disliked}  dislikes = {dislikes} />
-                        <Bookmark bookmark={bookmark} />
+                        <Like liked={liked} likes={likes} id={id}/>
+                        <Dislike disliked={disliked}  dislikes = {dislikes} id={id} />
+                        <Bookmark bookmarked={bookmark} id={id}/>
                     </ButtonGroup>
                     <article className="font-roboto my-3" dangerouslySetInnerHTML={{ __html: description }}>
 
@@ -37,7 +42,7 @@ class NewsDetails extends React.Component {
 
 const mapStoreToProps = (state, ownProps) => {
     return {
-        newsDetails: state.newsfeed.find((news) => { return news.id == ownProps.match.params.id })
+        newsDetails: Object.assign({}, state.newsfeed.find((news) => { return news.id == ownProps.match.params.id }))
     }
 }
 
