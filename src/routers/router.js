@@ -7,7 +7,7 @@ import NotFoundComponent from "../components/notfound";
 
 const AppRouter = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <div>
                 <Header />
                 <div className="content-panel">
