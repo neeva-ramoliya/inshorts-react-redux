@@ -8,7 +8,7 @@ const LikeComponent =  (props) => {
     let { liked, likes, id } = props;
     return (
         <Button className="mx-2" color={liked ? "info" : "secondary"} onClick={(event) => props.like(id)}>
-            <i class="material-icons text-white">thumb_up_alt</i>
+            <i className="material-icons text-white">thumb_up_alt</i>
             <span className="icon-btn-text">{likes || 0}</span>
         </Button>
     )

@@ -7,7 +7,7 @@ const DislikeComponent =  (props) => {
     let { disliked, dislikes, id} = props;
     return (
         <Button className="mx-2" color={disliked ? "danger" : "secondary"} onClick={(event) => props.dislike(id)} >
-            <i class="material-icons text-white">thumb_down_alt</i>
+            <i className="material-icons text-white">thumb_down_alt</i>
             <span className="icon-btn-text">{dislikes || 0}</span>
         </Button>
     )
