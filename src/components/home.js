@@ -6,7 +6,7 @@ import NewsCard from "./newscard";
 const Home = (props) => {
     
     return (
-        <Container>
+        <Container className="flex-container">
           {
               props.newsfeed.map((news, index) => {
                   return <NewsCard data={news}></NewsCard>

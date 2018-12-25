@@ -13,12 +13,13 @@ class NewsCard extends React.Component {
     render() {
         const { id, img, title, info, description, likes, dislikes, liked =false, disliked =false, bookmark = false } = this.props.data;
         return (
-            <Card className="m-4 p-0">
-                <Row >
-                    <Col xs="12" sm="12" md="6">
+            <div className="flex-item">
+                <Card className="m-4 p-0">
+                    
+                    <Col xs="12" sm="12">
                         <CardImg height="100%" src={img} alt="Card image cap" />
                     </Col>
-                    <Col  xs="12" sm="12" md="6">
+                    <Col  xs="12" sm="12">
                         <CardBody>
                             <Link to={`/news/${id}`}><CardTitle className="text-body font-Oswald"><h3>{title}</h3> </CardTitle></Link>
 
@@ -31,8 +32,8 @@ class NewsCard extends React.Component {
                         </CardBody>
                         <CardSubtitle className="blockquote-footer">{info}</CardSubtitle>
                     </Col>
-                </Row>
-            </Card>
+                </Card>
+            </div>
 
         )
     }
