@@ -15,10 +15,10 @@ class NewsCard extends React.Component {
         return (
             <Card className="m-4 p-0">
                 <Row >
-                    <Col sm="12" md="6">
+                    <Col xs="12" sm="12" md="6">
                         <CardImg height="100%" src={img} alt="Card image cap" />
                     </Col>
-                    <Col sm="12" md="6">
+                    <Col  xs="12" sm="12" md="6">
                         <CardBody>
                             <Link to={`/news/${id}`}><CardTitle className="text-body font-Oswald"><h3>{title}</h3> </CardTitle></Link>
 

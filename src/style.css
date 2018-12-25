@@ -15,3 +15,53 @@
     margin: 2px auto auto 2px;
     float: right;
 }
+
+.only-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 540px) {
+    body {
+        font-size: 20px !important;
+    }
+    .h3, h3 {
+      font-size: 1.25rem;
+    }
+    .only-mobile {
+        display: inline;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 18px !important;
+    }
+    .h3, h3 {
+      font-size: 1.25rem;
+    }
+    .only-mobile {
+        display: inline;
+    }
+    
+}
+
+
+@media screen and (max-width: 992px) {
+    body {
+        font-size: 14px !important;
+    }
+    .h3, h3 {
+      font-size: 1.25rem;
+    }
+}
+
+
+@media screen and (min-width: 993px) {
+    body {
+        font-size: 16px !important;
+    }
+    .h3, h3 {
+      font-size: 1.5rem;
+    }
+}
